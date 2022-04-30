@@ -1,17 +1,17 @@
 
 class Baloon {
     constructor() {
-        this.r = 75;
-        this.x = width;
-        this.y = height - this.r; // bootom 
+        this.f = 75;
+        this.n = width;
+        this.l = height - this.f;
     }
 
     move() {
-        this.x -= 10;//سرعة الوحش 
+        this.n -= 16;
     }
 
     show() {
-        image(tImg, this.x, this.y, this.r, this.r);
+        image(bImag, this.n, this.l, this.f, this.f);
 
         //  fill(255, 50);
         //  ellipseMode(CORNER);

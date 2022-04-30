@@ -1,41 +1,32 @@
 
 class Mario {
     constructor() {
-        this.r = 100;   //حجم الكاركتر 
-         this.x = 50;     // موقع وقفة الكاركتر 
-        this.y = height - this.r;
-        this.vy = 0; //القفزه كيف 
-        this.gravity = 2; // الجاذبية 
+        this.f = 100;
+        this.n = 50;
+        this.l = height - this.f;
+        this.r = 0;
+        this.gravity = 3;
     }
 
     jump() {
-        if (this.y == height - this.r) {//عشان يقفز بشكل صح 
-            this.vy = -35;
+        if (this.l == height - this.f) {
+            this.r = -35;
         }
-            
-        
-    
     }
 
     hits(balloon) {
 
-        return collideRectRect(this.x, this.y, this.r, this.r, balloon.x, balloon.y, balloon.r, balloon.r);//لايبري جاهزه ترجع ترو او فولس اذاا تصادم الوحش وماريو 
+        return collideRectRect(this.n, this.l, this.f, this.f, balloon.n, balloon.l, balloon.f, balloon.f);
     }
 
     move() {
-        //عشان يقفز بشكل صح 
-            this.y += this.vy;
-            this.vy += this.gravity;
-            this.y = constrain(this.y, 0, height - this.r);
-     
-        
-
-
+        this.l += this.r;
+        this.r += this.gravity;
+        this.l = constrain(this.l, 0, height - this.f);
     }
 
     show() {
-        image(uImg, this.x, this.y, this.r, this.r);
-
+        image(mImag, this.n, this.l, this.f, this.f);
 
         //  fill(255, 50);
         //  ellipseMode(CORNER);
