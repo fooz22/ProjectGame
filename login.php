@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <script src =  "character.js">
+
+    </script>
   
 
 
@@ -115,7 +118,7 @@ button{
     </div>
 
 
-
+  
 
 
 
@@ -133,7 +136,6 @@ button{
            </div>
 <?php
 
-
 if(isset($_POST['login'])){
        $username="root";
        $password="";
@@ -150,14 +152,16 @@ if(isset($_POST['login'])){
 
 
            }
+           echo  "<div '>".'the password or email is wrong'."</div>";
+
          
        }
-        else{
-           echo  "<div '>".'the password or email is wrong'."</div>";
-            }
-
+       
+         
+        
 
 ?>
+
 </form>
        </div>
     </main>

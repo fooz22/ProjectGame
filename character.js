@@ -24,10 +24,6 @@ var sfx = {
 
 
 
-//var original = Runner.prototype.gameOver;
-//Runner.prototype.gameOver = function(){};
-//Runner.instance_.tRex.setJumpVelocity(10);
-
 function preload() {
     const options = {
         probabilityThreshold: 0.95
@@ -63,7 +59,7 @@ function keyPressed() {
     if (key == ' ') {
         mario.jump();
         sco++
-        sfx.JumpM.play();
+       sfx.JumpM.play();
 
     }
 }
@@ -79,7 +75,7 @@ function draw() {
         t.show();
         if (mario.hits(t)) {
             alert("Game over. Score:"+ sco  ) ; 
-            sfx.Dead.play() 
+           sfx.Dead.play() 
             noLoop();
         }
     }

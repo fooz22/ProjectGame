@@ -13,8 +13,5 @@ class Baloon {
     show() {
         image(bImag, this.n, this.l, this.f, this.f);
 
-        //  fill(255, 50);
-        //  ellipseMode(CORNER);
-        // ellipse(this.x, this.y, this.r, this.r);
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     
 </head>
@@ -42,10 +42,11 @@ if(isset($_POST['register'])){
     $checkemail->bindParam("email",$email);
     $checkemail->execute();
     if($checkemail->rowCount()>0){
+
         echo "<div '>".'Existing ' ."</div>" ;
     }
     else{
-        $name=$_POST['username'];
+        $name=$_POST['name'];
         // $age=$_POST['age'];
         $email=$_POST['email'];
         $password=$_POST['password'];
@@ -61,9 +62,10 @@ if(isset($_POST['register'])){
            else{
                echo  "<div '>".'error' ."</div>";
            }
+        }
 
 
-    }
+
 }
 
 
